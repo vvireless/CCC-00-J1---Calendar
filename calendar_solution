@@ -1,0 +1,26 @@
+data_input = input('').split(' ')
+day_start = int(data_input[0])
+day_amount = int(data_input[1])
+count = 1
+days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat']
+
+days_list = ' '.join(str(day) for day in days)
+
+print(days_list)
+
+row = []
+for _ in range(day_start - 1):
+    row.append('   ')
+
+while count <= day_amount:
+    if count <= 9:
+        row.append('  ' + str(count))
+    if count >= 10:
+        row.append(' ' + str(count))
+    if (day_start - 1 + count) % 7 == 0:
+        print(' '.join(row))
+        row.clear()
+    count = count + 1
+
+if row.__len__() > 0:
+    print(' '.join(row))
