@@ -1,3 +1,6 @@
+# By Vivian Yuan
+# CCC '00 J1 - Calendar
+
 data_input = input('').split(' ')
 day_start = int(data_input[0])
 day_amount = int(data_input[1])
